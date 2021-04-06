@@ -1,7 +1,13 @@
 {
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Night Owl",
   "git.postCommitCommand": "sync",
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "prettier.semi": false,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true
 }
