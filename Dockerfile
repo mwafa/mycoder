@@ -33,6 +33,9 @@ ENV PORT=8080
 RUN code-server --install-extension esbenp.prettier-vscode
 RUN code-server --install-extension streetsidesoftware.code-spell-checker
 RUN code-server --install-extension pkief.material-icon-theme
+RUN code-server --install-extension amatiasq.sort-imports
+RUN code-server --install-extension mhutchie.git-graph
+RUN code-server --install-extension coenraads.bracket-pair-colorizer
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
