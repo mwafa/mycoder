@@ -36,6 +36,7 @@ RUN code-server --install-extension pkief.material-icon-theme
 RUN code-server --install-extension amatiasq.sort-imports
 RUN code-server --install-extension mhutchie.git-graph
 RUN code-server --install-extension coenraads.bracket-pair-colorizer
+RUN code-server --install-extension sdras.night-owl
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
