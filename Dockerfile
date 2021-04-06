@@ -29,6 +29,11 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Port
 ENV PORT=8080
 
+# Install Extension
+RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension streetsidesoftware.code-spell-checker
+RUN code-server --install-extension pkief.material-icon-theme
+
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
