@@ -4,7 +4,7 @@ START_DIR=/home/coder/project
 
 # GITHUB CONFIG
 [ -n "${GIT_NAME}" ] && git config --global user.name "${GIT_NAME}"
-[ -n "${GIT_EMAIL}" ] && git config --global user.name "${GIT_EMAIL}"
+[ -n "${GIT_EMAIL}" ] && git config --global user.email "${GIT_EMAIL}"
 
 # add rclone config and start rclone, if supplied
 if [[ -z "${RCLONE_DATA}" ]]; then
