@@ -37,7 +37,7 @@ else
         /home/coder/push_remote.sh
     fi
     # File Watcher
-    /home/coder/go/bin/watcher -cmd="/home/coder/push_remote.sh" $RCLONE_SOURCE_PATH &
+    /home/coder/go/bin/watcher -cmd="sh /home/coder/push_remote.sh" $RCLONE_SOURCE_PATH &
 
 fi
 
