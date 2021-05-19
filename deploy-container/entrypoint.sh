@@ -29,13 +29,15 @@ else
     if rclone ls $RCLONE_REMOTE_PATH; then
         # grab the files from the remote instead of re-cloning the git repo
         echo "Pulling existing files from remote..."
-        /home/coder/pull_remote.sh&
+        /home/coder/pull_remote.sh
     else
         # we need to clone the git repo and sync
         echo "Pushing initial files to remote..."
         [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" && mkdir -p $START_DIR && echo "intial file" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
-        /home/coder/push_remote.sh&
+        /home/coder/push_remote.sh
     fi
+    # File Watcher
+    /home/coder/go/bin/watcher -cmd="/home/coder/push_remote.sh" $RCLONE_SOURCE_PATH &
 
 fi
 

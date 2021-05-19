@@ -39,6 +39,9 @@ RUN code-server --install-extension coenraads.bracket-pair-colorizer
 RUN code-server --install-extension sdras.night-owl
 RUN code-server --install-extension james-yu.latex-workshop
 
+# Install Watcher
+RUN sudo apt-get install -y golang & go get -u github.com/radovskyb/watcher/...
+
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
